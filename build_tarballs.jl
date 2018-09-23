@@ -28,6 +28,8 @@ platforms = [
     Linux(:x86_64, libc=:glibc)
 ]
 
+platforms = expand_gcc_versions(platforms)
+
 # The products that we will ensure are always built
 products(prefix) = [
     LibraryProduct(prefix, "libMinuit2", Symbol(""))
